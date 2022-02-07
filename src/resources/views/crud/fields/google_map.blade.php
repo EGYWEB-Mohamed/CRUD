@@ -194,6 +194,13 @@
                         $field.val(JSON.stringify(data));
 
                     }
+                    
+                    element.keydown(function(e) {
+                        if ($('.pac-container').is(':visible') && e.keyCode == 13) {
+                            e.preventDefault();
+                            return false;
+                        }
+                    });
                 } catch (e) {
                     console.log(e);
                 }
